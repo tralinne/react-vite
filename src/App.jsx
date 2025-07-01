@@ -4,7 +4,10 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-
+const myFunction = () =>
+{
+  console.log('run my arrow function')
+}
   return (
     <div className="App">
       <header className="App-header">
