@@ -1,19 +1,21 @@
 import { useState } from 'react'
 import logo from './logo.svg'
+import favicon from './favicon.svg'
 import './App.css'
+import MyComponent from './components/learn/MyComponents'
+import {SecondComponent} from './components/learn/SecondComponent'
 
 const App = () => {
   const [count, setCount] = useState(0)
-const myFunction = () =>
-{
-  console.log('run my arrow function')
-}
-myFunction()
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <div><img src={logo} className="App-logo" alt="logo" /></div> 
+       <div><img src={favicon} className="App-logo" alt="favicon" /></div>
         <p>Hello Vite + React!</p>
+        <MyComponent></MyComponent>
+        <SecondComponent></SecondComponent>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
